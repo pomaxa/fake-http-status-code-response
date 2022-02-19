@@ -35,6 +35,8 @@ enum Status: int
             self::CODE_204 => 'The server successfully processed the request, and is not returning any content',
             self::CODE_300 => 'Indicates multiple options for the resource from which the client may choose (via agent-driven content negotiation). For example, this code could be used to present multiple video format options, to list files with different filename extensions, or to suggest word-sense disambiguation.',
             self::CODE_400 => 'The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, size too large, invalid request message framing, or deceptive request routing).',
+
+            self::CODE_500 => 'A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.',
         };
     }
 
@@ -54,7 +56,7 @@ enum Status: int
 
             self::CODE_300 => 'Multiple Choices',
             self::CODE_400 => 'Bad Request',
-            self::CODE_500 => 'OK',
+            self::CODE_500 => 'Internal Server Error',
         };
     }
 }

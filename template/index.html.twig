@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stubs for HTTP STATUS code</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Romans Shvets"/>
+    <meta name="description" content="Page to be used when you need to check how your api will work with different responses">
+
+    <meta property="og:title" content="Stubs for HTTP STATUS code">
+    <meta property="og:description" content="Page to be used when you need to check how your api will work with different responses">
+    <meta property="og:image" content="/android-chrome-512x512.png"> {#this need to be adjusted later#}
+    <meta property="og:url" content="/">
+    <meta property="og:site_name" content="status-codes.p4.lv">
+{#    <meta name="twitter:card" content="summary_large_image">#}
+{#    <meta name="twitter:image:alt" content="image description">#}
+
+
+    <meta name="keywords" content="http, status code, stubs"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+
+
+
+{#    <link href="style.css" rel="stylesheet">#}
+    <style type="text/css">
+
+
+        ul {
+            list-style: none;
+        }
+
+        ul li::before {
+            content: "~ ";
+            background-size: contain;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            position: relative;
+            top: 0.1rem;
+            margin-right: 0.2rem;
+        }
+
+        details {
+            padding-left: 5rem;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1>Stubs for different HTTP response codes</h1>
+
+
+<ul>
+    {% for case in cases %}
+        <li>
+            <a href="/{{ case.value }}"> CODE {{ case.value }}</a>
+            <details>
+                <summary> {{ case.name() }}</summary>
+                {{ case.description() }}
+            </details>
+
+        </li>
+    {% endfor %}
+
+</ul>
+
+
+<footer>
+    <p>contact: <a href="mailto: pomaxa@gmail.com">my email box</a></p>
+</footer>
+</body>
+</html>
